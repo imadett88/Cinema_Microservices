@@ -15,9 +15,9 @@ spring:
     import: optional:configserver:http://localhost:7777
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/clients
-    username: imad
-    password: 1234
+    url: jdbc:postgresql://localhost:5431/clients
+    username: username
+    password: password
   jpa:
     hibernate:
       ddl-auto: create

@@ -15,7 +15,7 @@ spring:
     import: optional:configserver:http://localhost:7777
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/cinemas
+    url: jdbc:postgresql://localhost:5432/cinemas?sslmode=disable
     username: imad
     password: 1234
   jpa:
