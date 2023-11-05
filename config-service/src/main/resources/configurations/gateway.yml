@@ -21,4 +21,9 @@ spring:
           predicates:
             - Path=/api/v1/cinemas/**
 
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+
 
