@@ -23,4 +23,9 @@ public class ClientServiceImpl implements ClientService {
     public List<Client> allClients() {
         return clientRepository.findAll();
     }
+
+    @Override
+    public List<Client> allClientsByCinema(Long cinemaId) {
+        return clientRepository.findAllByCinemaId(cinemaId);
+    }
 }

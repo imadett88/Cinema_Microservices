@@ -27,4 +27,9 @@ public class ClientController {
        return ResponseEntity.ok(clientServiceImp.allClients());
     }
 
+    @GetMapping("/cinema/{cinema-id}")
+    public ResponseEntity<List<Client>> findAll(@PathVariable("cinema-id") Long cinemaId) {
+        return ResponseEntity.ok(clientServiceImp.allClientsByCinema(cinemaId));
+    }
+
 }

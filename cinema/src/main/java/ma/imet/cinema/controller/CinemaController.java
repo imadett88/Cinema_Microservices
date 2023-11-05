@@ -3,6 +3,7 @@ package ma.imet.cinema.controller;
 import lombok.RequiredArgsConstructor;
 import ma.imet.cinema.entities.Cinema;
 import ma.imet.cinema.service.CinemaServiceImpl;
+import ma.imet.cinema.connection.FullCinemaResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -25,6 +26,11 @@ public class CinemaController {
     @GetMapping
     public ResponseEntity<List<Cinema>> findAll() {
        return ResponseEntity.ok(cinemaServiceImpl.allCinemas());
+    }
+
+    @GetMapping("/with-clients/{cinema-id}")
+    public ResponseEntity<FullCinemaResponse> findAll(@PathVariable("cinema-id") Long cinemaId){
+        return ResponseEntity.ok(cinemaServiceImpl.findCinemasWithClients(cinemaId));
     }
 
 }

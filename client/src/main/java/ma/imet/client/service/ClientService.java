@@ -9,4 +9,6 @@ public interface ClientService {
     public void saveClient(Client client);
 
     public List<Client> allClients();
+
+    public List<Client> allClientsByCinema(Long cinemaId);
 }
